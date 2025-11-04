@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Get materials list",
+      "method": "GET",
+      "path": "/list",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "materials": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get categories",
+      "method": "GET",
+      "path": "/categories",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "categories": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get colors",
+      "method": "GET",
+      "path": "/colors",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "colors": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

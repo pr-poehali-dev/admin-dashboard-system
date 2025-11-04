@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "Login with correct credentials",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "login": "admin",
+        "password": "adminik"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "user": {
+          "login": "admin",
+          "role": "admin"
+        }
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Login with incorrect credentials",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "login": "wrong",
+        "password": "wrong"
+      },
+      "expectedStatus": 401,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
